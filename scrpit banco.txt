@@ -1,0 +1,25 @@
+TABELA CLIENTE 
+------
+id cliente primary key auto increment
+nome varchar (45)
+sobrenome varchar (100)
+rua varchar (45)
+cidade varchar (45)
+cep char (9)
+bairro (45)
+cnpj char(14)
+email varchar(50)
+telefone char(10)
+fk id dados (foreigh key references DADOS)
+
+TABELA DADOS
+--------
+Id dados primary key auto increment
+Numero de serie tank varchar(45)
+temperatura (float 4.2 ou 4.5)
+dia/hora (datetime)
+
+modelagem (TARCISO)
+
+
+
