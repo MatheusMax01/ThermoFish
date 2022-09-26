@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora Finceira</title>
+</head>
+
+<body>
+    <header>
+        <div id="title">
+            <h1>Thermo Fish</h1>
+
+        </div>
+
+        <ul>
+            <a href="#">
+                <li>Inicio</li>
+            </a>
+            <a href="#">
+                <li>Sobre</li>
+            </a>
+            <a href="#">
+                <li>Contato</li>
+            </a>
+            <a href="#" id="cliente-btn">
+                <li>Já é cliente ?</li>
+            </a>
+
+        </ul>
+    </header>
+
+    <main>
+        <aside>
+            <h2>Quanto sua safra pode crescer</h2>
+            <h2><span id="span1">com nossa solução.</span></h2>
+            <p>Sem um controle de temperatura o crescimento dos peixes leva em torno de 7 meses para atingir o peso de
+                abate, com a implementação do nosso projeto você consegue acompanhar a temperatura da água e assim tomar
+                as melhores decisões de manejo acarretando <b>redução de 1 mês</b> no tempo de crescimento, ou seja,
+                <b>sua produção aumenta em até 16%.</b>
+            </p>
+            <!-- <span id="dados">Considerando o preço de venda por quilo R$8.00 e <br> a capacidade de 180kg de tilápia por
+                m³ de agua.</span> -->
+            <form>
+                <input id="ipt_tam" type="text" placeholder="Insira o tamanho do tanque em litros">
+                <input id="ipt_tanques" type="text" placeholder="Insira a quantidade de tanques">
+                <input type="button" value="Enviar dados" onclick="calc()">
+
+            </form>
+        </aside>
+
+        <article>
+            <img src="Logo Thermofish.png" alt="logo" width="400px">
+        </article>
+
+    </main>
+    <div id="div_msg"></div>
+
+
+
+</body>
+
+</html>
+<script>
+    function calc() {
+        /* calcular quantos kilos de tilápia por tanque */
+        var kgtanque = (ipt_tam.value / 1000) * 180;
+
+        /* calcular o faturamento por ciclos de crescimento/abate de um tanque */
+        var fatupciclo = kgtanque * 8;
+
+        /* calcular a quantidade de ciclos de crescimento/abate em 1 ano SEM a implementação */
+        var qtdciclosem = (12 / 7) * ipt_tanques.value;
+
+        /* calcular o faturamento de todos os cliclos de crescimento/abate em 1 ano SEM implementação */
+        var fatutotalsem = fatupciclo * qtdciclosem;
+
+        /* calcular a quantidade de cliclos de crescimento/abate COM a nossa implementação */
+        var qtdciclocom = (12 / 6) * ipt_tanques.value;
+
+        /* calcular o faturamento de todos cliclos de crescimento/abate em 1 ano COM implementação */
+        var fatutotalcom = fatupciclo * qtdciclocom;
+
+        /* calcular a diferença de cliclos COM e SEM a implementação */
+        var difciclos = qtdciclocom - qtdciclosem;
+
+        /* calcular a diferença de faturamento com e sem a implementação */
+        var diffatu = fatutotalcom - fatutotalsem
+
+        /* calcular a porcentagem da diferença de faturamento*/
+        var fatupercent = diffatu * 100 / fatutotalsem;
+
+
+
+        div_msg.innerHTML = ` <br>Sem a nossa implantação, em 1 ano, você faz 
+<br><b>${(qtdciclosem).toFixed(1)}</b> ciclos de crescimento/abate e uma receita estimada de <b>R$${(fatutotalsem).toFixed(2)}</b>. <br><br>Com o nosso projeto em 1 ano, voce consegue
+<br><b>${(qtdciclocom).toFixed(0)}</b> ciclos de crescimento/abate e uma receita estimada de <b>R$${(fatutotalcom).toFixed(2)}</b>, ou seja <b>${(difciclos).toFixed(1)}</b> ciclos a mais, representando um aumento de <b>R$${(diffatu).toFixed(2)}</b> <b>(${(fatupercent).toFixed(2)}%)</b>. <br><br>`
+
+    }
+</script>
