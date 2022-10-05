@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThermoFish - Referência em monitoramento </title>
+    <link rel="stylesheet" href="Estilos.css">
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>ThermoFish</h1>
+            <!-- <img src="Logo Thermofish.png" alt="logo" width="80px"> -->
+            <ul class="navbar">
+                <li id="#inicio"><a href="#inicio">Inicio</a></li>
+                <li><a href="#solucao">Solução</a></li>
+                <li><a href="">Sobre nós</a></li>
+                <li><a href="Login.html">Login</a></li>
+                <li><a href="cadstro.html">Cadastro</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- <div class="fantasma"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam amet sed id, laboriosam voluptas ipsa delectus dolorem quis aperiam, blanditiis earum, architecto beatae! Neque cupiditate modi alias. Temporibus, minus eveniet.</p></div> -->
+
+
+    <section id="inicio">
+        <div class="banner">
+            <div class="container">
+                <p id="p1">A melhor e mais morderna <b>solução</b>para os criadores mais <b> exigentes </b>produtores
+                </p>
+                <button id="btn-banner">Conheça nosso produto</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="solucao">
+
+        <div class="social">
+            <div class="container">
+                <div class="boxes">
+
+                    <div class="box">
+                        <img src="icons8-hot-springs-100.png" alt="icone de missão">
+                        <h4>Monitorar</h4>
+                        <p>Com a solução ThermoFish<br> você recebe em tempo real os parametros<br> de todos os seus
+                            tanques.</p>
+                    </div>
+                    <div class="box">
+                        <img src="icons8-planejamento-ambiental-64.png" alt="icone de visão">
+                        <h4>Preservar</h4>
+                        <p>Os dados captados por <br> nossos sensores são essencias para<br>enteder como manter a saúde
+                            dos animais <br> e garantir a continua produção. </p>
+                    </div>
+                    <div class="box">
+                        <img src="icons8-pesquisar-48.png" alt="icone de valores">
+                        <h4>Analisar</h4>
+                        <p>A ThermoFish oferece um painel<br> com todas as informações que o<br> produtor necessita para
+                            avaliar e melhorar<br> sua produção.</p>
+                    </div>
+                </div>
+
+
+                <div class="container-solucao">
+                    <div class="container-simulador">
+
+                        <h2>Quanto sua safra</h2>
+                        <h2>pode crescer</h2>
+                        <h2><span>com nossa solução</span></h2>
+                        <div id="div_msg">
+                            <p>Sem um controle de temperatura o crescimento dos peixes leva em torno de 7 meses para
+                                atingir o peso de
+                                abate, com a implementação do nosso projeto você consegue acompanhar a temperatura da
+                                água e assim tomar
+                                as melhores decisões de manejo acarretando <b>redução de 1 mês</b> no tempo de
+                                crescimento, ou seja,
+                                <b>sua produção aumenta em até 16%.</b>
+                            </p>
+                        </div>
+                        <form>
+                            <input id="ipt_tank" type="text" placeholder="Insira a Quantidade de tanques">
+                            <input id="ipt_valor" type="text" placeholder="Insira o Valor por KG de peixe">
+                            <input type="button" value="Enviar dados" onclick="calc()">
+
+                        </form>
+
+                    </div>
+
+                    <article>
+
+                        <img src="Logo Thermofish.png" alt="logo" width="350px" height="350px">
+                    </article>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="footer">
+
+        <div class="container">
+            <h4>ThermoFish referência em monitoramento. &copy; 2022 </h4>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
+<script>
+    function calc() {
+        var pesoprodu = ipt_tank.value * 10000
+        var valorprodu = ipt_valor.value * pesoprodu
+        var receita = valorprodu * (60 / 7)
+        var Ssolucao = (60 / 7) * ipt_tank.value
+        var Csolucao = (60 / 6) * ipt_tank.value
+        var aumentopercentual = Csolucao - Ssolucao
+        var tempoprodu = ((aumentopercentual * 100) / Ssolucao)
+        var novarec = receita * 1.16
+        var Ganho = novarec - receita
+        div_msg.innerHTML = `Atualmente voce produz ${pesoprodu}Kg por safra e tem ${valorprodu.toFixed(2)}
+         de receita ,ao longo de 5 anos estimasse que vc produza ${Ssolucao.toFixed(0)} safras e recaba $${receita.toFixed(2)} SEM a nossa solução. 
+          Com nossa solução sua produção passa a ser ${tempoprodu.toFixed(2)}% maior, serão ${Csolucao.toFixed(0)} safras e a
+          receita passa a ser ${novarec.toFixed(2)}, é um ganho de $${Ganho.toFixed(2)}.`
+
+    }
+</script>
