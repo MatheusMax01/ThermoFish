@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="side-menu">
+        <div class="brand-nome">
+           
+            <img src="imgs/Thermofish.png" width="400px" style="margin-top: 210px;">
+            
+        </div>
+        <h1>Bem-Vindo ao Painel de Análise, Usuário!</h1><br><br>
+        <ul>
+            <a href="#DashBoardInicio"> <li><img src="imgs/dashboard.png" width="20px">&nbsp; DashBoard</li></a>
+            <a href="#4Graficos"><li><img src="imgs/tanque.png" width="20px">&nbsp; Tanques</li></a>
+            <a href=""> <li><img src="imgs/gear.png" width="20px">&nbsp; Configurações</li></a>
+            <a href=""><li><img src="imgs/help.png" width="20px">&nbsp; Ajuda</li></a>
+            <a href=""><li><img src="imgs/logout.png" width="20px">&nbsp; Sair</li></a>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+                
+                <div class="user">
+                    
+                    <a href=""><img src="imgs/user.png" style="margin-top: 5px; margin-left: 10px; margin-right: 5px;" ></a> 
+                    <a href="#"><img src="imgs/bell.png"  style="margin-top: 5px; margin-left: 50px;"></a>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+          <section id="DashBoardInicio">
+            <div class="cards">
+                <a href="">
+                <div class="card">
+                    <div class="box">
+                        <h4>4</h4>
+                        <h3>Critico</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="imgs/delete-button.png" width="80px">
+                    </div>
+                </div>
+            </a>
+
+                <a href="">
+                  
+                <div class="card">
+                    <div class="box">
+                        <h4>3</h4>
+                        <h3>Alerta</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="imgs/aviso.png" width="90px">
+                    </div>
+                </div>
+                </a>
+
+                <a href="">
+                <div class="card">
+                    <div class="box">
+                        <h4>41</h4>
+                        <h3>Ideal</h3>
+                    </div>
+                    <div class="icon-case">
+                       <img src="imgs/verifica.png" width="80px">
+                    </div>
+                </div>
+            </a>
+
+           </div>
+            <div class="content-2">
+            <div class="graficos_chartjs"><canvas id="myChart"></canvas></div>
+            <div class="graficos_chartjs2"><canvas id="myChart2"></canvas></div>
+           </div>
+          </section>
+
+           <section id="4Graficos">
+           <div class="content-2">
+            <div class="graficos_chartjs3"><canvas id="myChart3"></canvas></div>
+            <div class="graficos_chartjs4"><canvas id="myChart4"></canvas></div>
+            
+           </div> 
+
+           <div class="content-2">
+            <div class="graficos_chartjs5"><canvas id="myChart5"></canvas></div>
+            <div class="graficos_chartjs6"><canvas id="myChart6"></canvas></div>
+            
+           </div> 
+          </section>
+           
+    </div>
+</body>
+</html>
+<script>
+  /*Gráfico 1 do lado da pizza*/
+    const labels = [
+      'Tanque-1',
+      'Tanque-3',
+      'Tanque-25',
+      'Tanque-16',
+      'Tanque-11',
+      'Tanque-9',
+      'Tanque-6',
+    ];
+
+    const data = {
+      labels: labels,
+      datasets: [{
+        label: 'Temperatura Dos Tanques Fora Dos Parâmetros',
+        backgroundColor: 'rgb(47, 79, 79)',
+        borderColor: 'rgb(255, 255, 255)',
+        data: [10, 39, 24, 32, 25, 4, 37,],
+      }]
+    };
+
+    const config = {
+      type: 'bar',
+      data: data,
+      options: {}
+    };
+
+  </script>
+
+<script>
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+
+  </script>
+
+<script>
+  /*Gráfico 3*/
+  const labels3 = [
+    '1:00',
+    '2:00',
+    '3:00',
+    '4:00',
+    '5:00',
+    '6:00',
+    '7:00',
+    '8:00',
+    '9:00',
+    '10:00',
+    '11:00',
+    '12:00',
+  ];
+
+  const data3 = {
+    labels: labels3,
+    datasets: [{
+      label: 'Temperatura Tanque-1',
+      backgroundColor: 'rgb(255, 255, 255)',
+      borderColor: 'rgb(47, 79, 79)',
+      data: [10, 30, 25, 32, 16, 35, 36, 25, 37, 38, 30, 27,],
+    }]
+  };
+
+  const config3 = {
+    type: 'line',
+    data: data3,
+    options: {}
+  };
+
+</script>
+
+<script>
+  const myChart3 = new Chart(
+    document.getElementById('myChart3'),
+    config3
+  );
+
+</script>
+
+  
+<script>
+  /*Gráfico 4*/
+  const labels4 = [
+  '1:00',
+    '2:00',
+    '3:00',
+    '4:00',
+    '5:00',
+    '6:00',
+    '7:00',
+    '8:00',
+    '9:00',
+    '10:00',
+    '11:00',
+    '12:00',
+  ];
+
+  const data4 = {
+    labels: labels4,
+    datasets: [{
+      label: 'Temperatura Tanque-2',
+      backgroundColor: 'rgb(255, 255, 255)',
+      borderColor: 'rgb(47, 79, 79)',
+      data: [0, 40, 25, 34, 24, 25, 32, 19, 26, 14, 10, 16,],
+    }]
+  };
+
+  const config4 = {
+    type: 'line',
+    data: data4,
+    options: {}
+  };
+
+</script>
+
+<script>
+  const myChart4 = new Chart(
+    document.getElementById('myChart4'),
+    config4
+  );
+
+</script>
+
+<script>
+  /*Gráfico 5*/
+  const labels5 = [
+  '1:00',
+    '2:00',
+    '3:00',
+    '4:00',
+    '5:00',
+    '6:00',
+    '7:00',
+    '8:00',
+    '9:00',
+    '10:00',
+    '11:00',
+    '12:00',
+  ];
+
+  const data5 = {
+    labels: labels5,
+    datasets: [{
+      label: 'Temperatura Tanque-3',
+      backgroundColor: 'rgb(255, 255, 255)',
+      borderColor: 'rgb(47, 79, 79)',
+      data: [0, 27, 32, 23, 29, 25, 24, 23, 40, 18, 30, 27,],
+    }]
+  };
+
+  const config5 = {
+    type: 'line',
+    data: data5,
+    options: {}
+  };
+
+</script>
+
+<script>
+  const myChart5 = new Chart(
+    document.getElementById('myChart5'),
+    config5
+  );
+
+</script>
+
+<script>
+  /*Gráfico 6*/
+  const labels6 = [
+  '1:00',
+    '2:00',
+    '3:00',
+    '4:00',
+    '5:00',
+    '6:00',
+    '7:00',
+    '8:00',
+    '9:00',
+    '10:00',
+    '11:00',
+    '12:00',
+  ];
+
+  const data6 = {
+    labels: labels6,
+    datasets: [{
+      label: 'Temperatura Tanque-4',
+      backgroundColor: 'rgb(255, 255, 255)',
+      borderColor: 'rgb(47, 79, 79)',
+      data: [0, 19, 25, 26, 30, 32, 31, 28, 29, 30, 31, 40,],
+    }]
+  };
+
+  const config6 = {
+    type: 'line',
+    data: data6,
+    options: {}
+  };
+
+</script>
+
+<script>
+  const myChart6 = new Chart(
+    document.getElementById('myChart6'),
+    config6
+  );
+
+</script>
+
+  <script>
+    /*Gráfico de Pizza*/
+    const labels2 = [
+      'Risco de Atraso na Produção',
+      
+    ];
+
+    const data2 = {
+      labels: labels2,
+      datasets: [{
+        label: 'Risco',
+        backgroundColor: ['rgb(47, 79, 79)', 'rgb(0, 128, 128)'], 
+        borderColor: 'rgb(255, 255, 255)',
+        data: [42,58],
+      }]
+    };
+
+    const config2 = {
+      type: 'pie',
+      data: data2,
+      options: {}
+    };
+
+  </script>
+
+<script>
+    const myChart2 = new Chart(
+      document.getElementById('myChart2'),
+      config2
+    );
+
+  </script>
+
+
+ 

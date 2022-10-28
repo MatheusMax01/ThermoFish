@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThermoFish | Login</title>
+
+    <!-- Aqui colocamos o link para o arquivo de estilização-->
+    <link rel="icon" href="Images/Icon.png">
+    <!-- <link rel="stylesheet" href="LoginEstilos.css"> -->
+    <link rel="stylesheet" href="Estilos1.css">
+    <script src="https://kit.fontawesome.com/f509651826.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- Nosso cabeçalho -->
+    <div class="header">
+        <div class="container">
+            <span id="nome"> <img class="lghead" src="Images/NOME.png"> </span>
+            <ul class="navbar">
+                <li id="#inicio"><a href="Index-copy.html">Inicio</a></li>
+                <li><a href="Index-copy.html#solucao">Solução</a></li>
+                <li><a href="Index-copy.html#simulador">Simulador</a></li>
+                <li><a href="Index-copy.html#Sobre">Sobre nós</a></li>
+                <div class="button">
+                    <li><a href="Login.html" id="lg-btn"><i class="fa-regular fa-user"></i>Entrar</a></li>
+                    <li><a href="Cadastro.html" id="cdt-btn">Cadastre-se</a></li>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <!-- Começo do Banner -->
+
+    <div class="banner">
+        <div class="container">
+            <div class="caixa_formulario">
+                <form class="flogin">
+                    <h1>Bem Vindo Novamente!</h1>
+
+                    <input id="ipt_email" type="email" name="email" placeholder="Seu e-mail...">
+                    <input id="ipt_senha" type="password" name="senha" placeholder="Sua senha...">
+                    <input type="button" name="login" value="Entrar" onclick="redirecionamento()">
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fim do Banner -->
+
+    <!-- Começo do footer -->
+    <footer class="main-footer">
+
+
+
+        <div class="footer-box">
+            <div class="company-footer">
+                <h4>Endereço:</h4>
+                <p>Rua Haddock lobo, 595 - Cerqueira Cesar.<br>
+                    São Paulo - SP</p>
+                <h4>Contatos:</h4>
+                <p>(11) 21436166<br>
+                    0800 072 6789 <br>
+                    WhatsApp: 99638-0772<br>
+                    thermofish@sac.com</p>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <div>
+
+                <img src="Images/NOME.png" alt="" id="logo-footer">
+            </div>
+            <h4>ThermoFish referência em monitoramento. &copy; 2022</h4>
+        </div>
+
+        <div class="footer-box">
+            <nav class="btn_social">
+                <ul>
+                    <li><i class="icon icon-facebook"><img src="Images/icons8-facebook-novo-50.png"
+                                alt="logo-facebook"></i></a></li>
+                    <li><img src="Images/Instagram_Rounded_Solid_icon-icons.com_61560.png" alt="logo-instagram"><i
+                            class="icon icon-instagram"></i></a></li>
+                    <li><img src="Images/icons8-whatsapp-50.png" alt="logo-whatsapp"><i
+                            class="icon icon-youtube"></i></a></li>
+                    <li><img src="Images/Youtube_Rounded_Solid_icon-icons.com_61558.png" alt="logo-youtube"><i
+                            class="icon icon-whatsapp"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    function redirecionamento() {
+
+        if (ipt_email.value.length == '') {
+            alert(`Campo de e-mail em branco, digite algo!`)
+
+        } else if (ipt_email.value.length < 7) {
+            alert(`Preencha corretamente o campo de e-mail!`)
+
+        } else if (ipt_email.value.indexOf('.') == -1) {
+            alert(`Coloque . no email!`)
+
+        } else if (ipt_email.value.indexOf('@') == -1) {
+            alert(`Coloque @ no email!`)
+
+        } else if (ipt_senha.value.length == '') {
+            alert(`Campo de senha em branco`)
+
+        } else {
+            window.location.href = "file:///C:/SPTech/Projeto%20e%20Inova%C3%A7%C3%A3o/Apresenta%C3%A7oes/Sprint%202/ThermoFIsh/DashBoard/Dash.html#DashBoardInicio";
+        }
+    }
+</script>

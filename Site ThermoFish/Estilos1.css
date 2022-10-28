@@ -1,0 +1,553 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Quicksand';
+    background-color: #04847575;
+}
+
+.header {
+    background-color: #dde2e1;
+    color: #020202;
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    margin: auto;
+    z-index: 3;
+    box-shadow: 3px 2px 2px rgb(131, 131, 131);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#nome {
+    width: 250px;
+    height: 35px;
+    align-items: center;
+    display: flex;
+}
+
+.lghead {
+    width: 100%;
+
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.navbar {
+    display: flex;
+    width: 500px;
+    height: 70px;
+    color: #000000;
+    list-style: none;
+    /* align-self: flex-end; */
+
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+#lg-btn {
+    background-color: #a4c2c2;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 1px 1px 2px rgb(131, 131, 131);
+    align-items: center;
+}
+
+#cdt-btn {
+    background-color: #a4c2c2;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 1px 1px 2px rgb(131, 131, 131);
+}
+
+#lg-btn:hover {
+    background-color: #2dadad;
+    color: white;
+}
+
+#cdt-btn:hover {
+    background-color: #2dadad;
+    color: white;
+}
+
+a {
+    font-size: 20px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+    white-space: nowrap;
+    display: flex;
+    margin-right: 10px;
+    font-variant: small-caps;
+    margin-top: 10px;   
+}
+
+a:hover {
+    color: #2dadad;
+    transition: 0.4s all;
+}
+
+/* Banner */
+.banner {
+    background-image: url(Images/header-aquaculture-timeline.jpg);
+    background-size: cover;
+    height: 700px;
+}
+
+.banner .container {
+    height: 8px;
+    display: flex;
+    padding: 150px 0px;
+    height: 300px;
+    margin: auto;
+}
+
+.banner p {
+    font-size: 36px;
+    width: 500px;
+    text-align: left;
+    align-self: center;
+    margin-right: 830px;
+    margin-top: 100px;
+    color: white;
+    line-height: 35px;
+}
+
+/* Solucao */
+
+#solucao {
+    padding-top: 114px;
+}
+
+#simulador {
+    padding-top: 100px;
+}
+
+.container-social {
+    display: flex;
+    justify-content: space-between;
+}
+
+.texto {
+    margin: 20px;
+}
+
+.container-solucao .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#logimg {
+    width: 500px;
+    height: 500px;
+    align-items: flex-end;
+    display: flex;
+}
+
+#calimg {
+    width: 395px;
+    height: 500px;
+    align-items: flex-end;
+    display: flex;
+    z-index: -2;
+}
+
+.card {
+    background-color: #dde2e1;
+    width: 550px;
+    height: 525px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px 40px 40px 40px;
+    transition: 2s all ease-in-out;
+    text-align: center;
+    box-shadow: -1px 2px 2px rgb(131, 131, 131);
+}
+
+.card.hide {
+    margin-right: 100px;
+    position: absolute;
+    border-radius: 40px 0px 0px 40px;
+}
+
+.resultado {
+    position: absolute;
+    right: 55%;
+    background-color: #25acac;
+    height: 525px;
+    width: 345px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0px 40px 40px 0px;
+    overflow: hidden;
+    opacity: 85%;
+    z-index: -1;
+    transition: 1s right ease-in-out;
+    font-size: 20px;
+    font-weight: 450;
+    line-height: 30px;
+    text-align: center;
+}
+
+.div_avançar {
+    display: flex;
+    text-align: center;
+}
+
+.resultado.show {
+    right: -62.5%;
+}
+
+span {
+    color: white;
+}
+
+p {
+    line-height: 25px;
+    max-width: 500px;
+    text-align: center;
+}
+
+.calculadora {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+    margin-left: 80px;
+}
+
+.calculadora [type="button"] {
+    height: 50px;
+    width: 50%;
+    background-color: #a4c2c2;
+    color: rgb(0, 0, 0);
+    margin: 15px;
+    cursor: pointer;
+    box-shadow: -1px 2px 2px rgb(131, 131, 131);
+}
+
+/* .calculadora [type="button"]:hover {
+    background-color: #2dadad;
+    color: white;
+    transition: 0.4s;
+} */
+
+.botao-simu[type="button"] {
+    height: 50px;
+    width: 50%;
+    background-color: #a4c2c2;
+    color: rgb(0, 0, 0);
+    margin: 15px;
+    cursor: pointer;
+    box-shadow: -1px 2px 2px rgb(131, 131, 131);
+}
+
+.botao-simu [type="button"]:hover{
+    background-color: #2dadad;
+    color: white;
+    transition: 0.4s;
+}
+
+input {
+    margin-top: 20px;
+    height: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    width: 350px;
+}
+
+.box img {
+    width: 80px;
+}
+
+.container .boxes {
+    justify-content: space-around;
+    display: flex;
+    padding: 100px;
+}
+
+.box {
+    margin: 50px 50px 50px 50px;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    background-color: #dde2e1;
+    padding: 15px;
+    box-shadow: 3px 3px 3px rgb(131, 131, 131);
+}
+
+.boxes p {
+    text-align: justify;
+}
+
+/* FOOTER*/
+
+.main-footer {
+    background-color: #dde2e1;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+#logo-footer {
+    width: 280px;
+    height: 280px;
+    align-items: center;
+    display: flex;
+}
+
+.footer-box {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* FIM DO FOOTER */
+
+/*inicio da tela de login */
+
+.flogin {
+    background: #dde1e0;
+    max-width: 400px;
+    width: 70%;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    border-radius: 5%;
+
+}
+
+.flogin h1 {
+    text-align: center
+}
+
+.flogin input[type=email],
+.flogin input[type=password] {
+    width: 70%;
+    height: 10px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    margin: 10px 0;
+
+}
+
+.flogin {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+
+}
+
+.flogin input[type="button"] {
+    width: 75%;
+    height: 40px;
+    cursor: pointer;
+    background: #a4c2c2;
+    color: black;
+    border: 0;
+    border-radius: 20px;
+    transition: 0.1s;
+    font-weight: bold;
+
+
+}
+
+.flogin input[type="button"]:hover {
+    background-color: #2dadad;
+    color: white;
+
+}
+
+input {
+    margin-top: 20px;
+    height: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    width: 350px;
+
+}
+
+
+/*fim da tela de login */
+
+
+
+/*inicio da tela de cadastro */
+.fcadas {
+    background: #dde1e0;
+    max-width: 400px;
+    width: 70%;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    border-radius: 5%;
+    margin-top: 35px;
+
+}
+
+.fcadas h1,
+h2,
+h3,
+h4 {
+    text-align: center;
+    margin: 0;
+}
+
+.fcadas h4 {
+    margin-bottom: 20px;
+}
+
+.fcadas input[type=email],
+.fcadas input[type=password],
+.fcadas input[type=text] {
+    width: 70%;
+    height: 5px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    margin: 10px 0;
+
+}
+
+.fcadas {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+
+}
+
+.fcadas input[type="button"] {
+    width: 75%;
+    height: 40px;
+    cursor: pointer;
+    background: #a4c2c2;
+    color: black;
+    border: 0;
+    border-radius: 20px;
+    transition: 0.1s;
+    font-weight: bold;
+
+
+}
+
+.fcadas input[type="button"]:hover {
+    background-color: #2dadad;
+    color: white;
+
+}
+
+input {
+    margin-top: 20px;
+    height: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    width: 350px;
+
+}
+
+/*fim da tela de cadastro */
+
+.btn_social {
+    width: 100%;
+    float: left;
+    display: flex;
+    margin: auto;
+    cursor: pointer;
+}
+
+.btn_social ul {
+    width: auto;
+    margin: auto;
+    float: left;
+
+}
+
+.btn_social ul li {
+    position: relative;
+    background: #dde2e1;
+    list-style: none;
+    float: left;
+    margin: 5px;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.btn_social ul li img {
+    width: 46px;
+}
+
+
+.btn_social ul li::before {
+    transition: 0.4s;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 90%;
+    left: 0;
+    background: #2fcacf;
+    z-index: -1;
+    transform: scale(1);
+    transition: .4s;
+}
+
+.btn_social ul li:hover::before {
+    transition: 0.4s;
+    top: 0%;
+}
+
+.btn_social ul li a:hover {
+    color: #555555;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #F7F4FB;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #25acac;
+    border: 2px solid #F7F4FB;
+    border-radius: 4px;
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url("Assests/Quicksand-VariableFont_wght.ttf") format("truetype");
+}
